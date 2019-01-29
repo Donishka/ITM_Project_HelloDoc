@@ -1,0 +1,81 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+      
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2011.00.jpg" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        Name
+                                    </h5>
+                                    <h6>
+                                            Medical Laboratory Technician
+                                    </h6>
+                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <ul class="nav nav-tabs">
+                                      <li class="nav-item">
+                                          <button type="button" class="btn btn-secondary q" (click)="moveToAbout()" >About</button>                           
+                                           </li>
+                                      
+                                      <li class="nav-item">
+                                          <button type="button" class="btn btn-secondary p" (click)="moveToPatientSearch()" >Patient Search</button>
+                                          </li>
+      
+                                          <li class="nav-item">
+                                            <button type="button" class="btn btn-secondary s" (click)="moveToRecommandedTest()" >Recommended Tests</button>    
+                                        </li>       
+                                  </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>WORK Addresses</p>
+                            <a href="https://www.hemashospitals.com/thalawathugoda-hospital-hemas">Hemas Hospital.Thalawathugoda</a><br/>
+                            <a href="https://www.lankahospitals.com/en/facilities/channeling-services">Lanka Channeling Center</a><br/>
+                            <a href="https://www.durdans.com/durdans-appointments/">Durdans Channeling Center</a>
+                            <p>SKILLS</p>
+                            <a href="">Medical Laboratory Technician</a><br/>
+                            <a href="">Skill-2</a><br/>
+                            <a href="">Skill-3</a><br/>
+                            <a href="">Skill-4</a><br/>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                       
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <input type="text" class="form-control search-slt" placeholder="Enter Patient ID">
+                                    </div>
+                                    
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                        <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
