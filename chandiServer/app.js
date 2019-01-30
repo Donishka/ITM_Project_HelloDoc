@@ -7,12 +7,7 @@ const database = require ('./databaseHandle/connectDatabase');
 const app = express();
 const http = require('http');
 
-// const users = require('./routes/users');
-// const card = require('./routes/card');
-// const subject = require('./routes/subject');
-// const attendance = require('./routes/attendance');
-// const classes = require('./routes/class');
-// const notification = require('./routes/notification')
+
 
 
 const role = require('./routes/role')
@@ -27,6 +22,13 @@ const appointment = require('./routes/appointment')
 const diseasedetail= require('./routes/diseasedetail')
 const prescription= require('./routes/prescription')
 const appSchedule= require('./routes/appSchedule')
+const medicine= require('./routes/medicine')
+const payment= require('./routes/payment')
+const currentState= require('./routes/currentState')
+
+
+
+
 
 const myRoute = require('./routes/myRoute');
 
@@ -50,22 +52,7 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 
-// //Set users
-// app.use('/users',users);
-// // Set card
-// app.use('/card',card);
 
-// // Set subject
-// app.use('/subject',subject);
-
-// // Set subject route
-// app.use('/attendance',attendance);
-
-// // Set class route
-// app.use('/class',classes);
-
-// // Set class notification
-// app.use('/notification',notification);
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin","*");
@@ -80,12 +67,7 @@ app.use((req, res, next) => {
     next()
 })
 
-// app.get('/', (req, res, next) => {
-//     console.log("index route");
-//     res.status(200).json({
-//         state: true
-//     })
-// })
+
 // index route
 app.get('/',function(req,res){
     console.log("index route called");
@@ -105,7 +87,13 @@ app.use('/labreport',labreport);
 app.use('/appointment',appointment);
 app.use('/diseasedetail',diseasedetail);
 app.use('/prescription',prescription);
-app.use('/appSchedule',appSchedule)
+app.use('/appSchedule',appSchedule);
+app.use('/medicine',medicine);
+app.use('/payment',payment);
+app.use('/currentState',currentState);
+
+
+
 
 app.use('/myRoute', myRoute);
 

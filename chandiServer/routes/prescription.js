@@ -15,7 +15,10 @@ router.post("/addPrescription", function (req, res) {
         req.body. madicineName,
         req.body.doctorRegNo,
         req.body. diseaseDetailId,
-        req.body.recommandedTest
+        req.body.recommandedTest,
+        req.body.medicineDosage,
+        req.body.edicineQty,
+        req.body.edicineNo,
     ]
 
     

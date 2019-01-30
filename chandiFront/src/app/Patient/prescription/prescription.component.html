@@ -31,23 +31,8 @@ box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
         <h4 class="name">NAME</h4>
 		<p class="info">Patient ID</p>
 		
-        <div class="stats row">
-          <div class="stat col-xs-4" style="padding-right: 50px;">
-            <p class="number-stat">3,619</p>
-            <p class="desc-stat">Followers</p>
-          </div>
-          <div class="stat col-xs-4">
-            <p class="number-stat">42</p>
-            <p class="desc-stat">Following</p>
-          </div>
-          <div class="stat col-xs-4" style="padding-left: 50px;">
-            <p class="number-stat">38</p>
-            <p class="desc-stat">Uploads</p>
-          </div>
-        </div>
-        <p class="desc">Hi ! My name is Jane Doe. I'm a UI/UX Designer from Paris, in France. I really enjoy photography and
-          mountains.</p>
-        <div class="social">
+    <p class="desc">There’s nothing worse than being in the hospital and not knowing what’s going on with your own care. So encourage your doctors, nurses and therapists to share information. Even if they don’t know the full story, sharing the information they have that affects the patient can make them instantly more likable.</p>
+    <div class="social">
           <i class="fa fa-facebook-square" aria-hidden="true"></i>
           <i class="fa fa-twitter-square" aria-hidden="true"></i>
           <i class="fa fa-pinterest-square" aria-hidden="true"></i>
@@ -56,12 +41,15 @@ box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
       </div>
       <div class="right col-lg-8">
         <ul class="nav">
-        
-          <li> <button type="button" class="btn btn-secondary" (click)="moveToPatientProfile()">Basic Health Info</button> </li>
-          <li> <button type="button" class="btn btn-secondary" (click)="moveToBasicInfo()">Disease Histroy</button> </li>
-          <li> <button type="button" class="btn btn-secondary" (click)="moveToCurrentState()">Current State</button> </li>
+          <li> <button type="button" class="btn btn-secondary" (click)="moveToPatientHome()">Patient Home</button> </li>
+          <li> <button type="button" class="btn btn-secondary" (click)="moveToBasicHealthInfo()">Basic Health Info</button> </li>
+          <li> <button type="button" class="btn btn-secondary" (click)="moveToDiseaseHistroy()">Disease Histroy</button> </li>
+          <li> <button type="button" class="btn btn-secondary" (click)="moveToMakeAppointment()">Make Appointment</button> </li>
           <li> <button type="button" class="btn btn-secondary" (click)="moveToLabReports()">Lab Reports </button> </li>
           <li> <button type="button" class="btn btn-secondary" (click)="moveToPrescription()">Prescription</button> </li>
+          <li> <button type="button" class="btn btn-secondary" (click)="moveToCurrentState()">Current State</button> </li>
+
+
         </ul>
         <div>
           

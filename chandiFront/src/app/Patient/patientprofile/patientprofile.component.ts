@@ -34,4 +34,21 @@ export class PatientprofileComponent implements OnInit {
     this._router.navigate(['/lab']);
     
   }
+
+  moveToMakeAppointment(){
+    this._router.navigate(['/makeapp']);
+    
+  }
+
+  moveToPatientHome(){
+    this._router.navigate(['/patientprofile']);
+    
+  }
+
+  moveToDiseaseHistroy(){
+    this._router.navigate(['/histroy']);
+    
+  }
+
+
 }

@@ -15,9 +15,11 @@ router.post("/addPatient", function (req, res) {
         req.body.maritalState,
         req.body.height,
         req.body.weight,
-        req.body.nic,
+        req.body.NIC,
        
     ]
+
+    console.log("PAtient details :"+JSON.stringify(patientData));
     database.addPatient(patientData, function (err, result) {
         if (err) {
             console.log(err);

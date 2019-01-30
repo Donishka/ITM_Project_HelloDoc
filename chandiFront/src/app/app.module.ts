@@ -13,7 +13,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Common/login/login.component';
-import { RegisterComponent } from './Common/register/register.component';
 import { UserhomeComponent } from './Doctor/userhome/userhome.component';
 
 import { HttpClient } from 'selenium-webdriver/http';
@@ -22,7 +21,6 @@ import { Register2Component } from './Doctor/register2/register2.component';
 import { Register3Component } from './Patient/register3/register3.component';
 import { SearchpComponent } from './Doctor/searchp/searchp.component';
 import { ApplistComponent } from './Doctor/applist/applist.component';
-import { MessageComponent } from './Patient/message/message.component';
 import { HomeComponent } from './Common/home/home.component';
 import { CalenderComponent } from './Doctor/calender/calender.component';
 import { PatientprofileComponent } from './Patient/patientprofile/patientprofile.component';
@@ -34,10 +32,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentComponent } from './FrontDesk/payment/payment.component';
 import { MbasicComponent } from './MLT/mbasic/mbasic.component';
 import { SearchmComponent } from './MLT/searchm/searchm.component';
-import { RectestComponent } from './MLT/rectest/rectest.component';
 import { RegistermComponent } from './MLT/registerm/registerm.component';
 import { AuthService } from './shared/services/auth.service';
 import { HttpModule } from '@angular/http';
+import { MakeappComponent } from './Patient/makeapp/makeapp.component';
+import { HistroyComponent } from './Patient/histroy/histroy.component';
 
 
 
@@ -47,13 +46,11 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
     UserhomeComponent,
     Register2Component,
     Register3Component,
     SearchpComponent,
     ApplistComponent,
-    MessageComponent,
     HomeComponent,
     CalenderComponent,
     PatientprofileComponent,
@@ -64,8 +61,9 @@ import { HttpModule } from '@angular/http';
     PaymentComponent,
     MbasicComponent,
     SearchmComponent,
-    RectestComponent,
     RegistermComponent,
+    MakeappComponent,
+    HistroyComponent,
   ],
 
   imports: [

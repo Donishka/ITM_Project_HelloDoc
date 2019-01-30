@@ -7,15 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  _router: any;
-
-  constructor(private_router:Router) { }
+  constructor(private _router:Router) { }
 
   ngOnInit() {
   }
-  moveToLogin(){
-    this._router.navigate(['/login']);
-    
+
+  moveToDoctorRegister(){
+    this._router.navigate(['/register2']);
+  }
+
+ 
+
+
+  moveToPatientRegister(){
+    this._router.navigate(['/register3']);
+  }
+  
+  moveToMLTRegister(){
+    this._router.navigate(['/registerm']);
   }
   
 }

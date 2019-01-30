@@ -17,9 +17,7 @@ export class ApplistComponent implements OnInit {
     this._router.navigate(['/searchp']);
   }
 
-  moveToDirectMessage(){
-    this._router.navigate(['/message']);
-  }
+ 
 
 
   moveToUserPage(){

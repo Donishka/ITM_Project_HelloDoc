@@ -1,38 +1,43 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>SignUp Form</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="src\app\Doctor\register2\register2.component.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<!-- //web font -->
+	<title>SignUp Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="src\app\Doctor\register2\register2.component.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //Custom Theme files -->
+	<!-- web font -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+	<!-- //web font -->
 </head>
+
 <body>
 	<!-- main -->
 	<div class="main-w3layouts wrapper">
 		<h1> SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
-                    <input class="text" type="text" name="Firstname" placeholder="Firstname" required=""><br>
-                    <input class="text" type="text" name="Lastname" placeholder="Lastname" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="text" type="text" name="Address" placeholder="Address" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="number" type="text" name="Contactnumber" placeholder="Contact Number" required=""><br>
-                    <input class="text" type="text" name="NIC" placeholder="NIC" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                   
-                    <input class="text" type="text" name="User Type" placeholder="User Type" required=""><br>
-                                 
-                            <input class="text" type="text" name="MLT Register Number" placeholder="MLT Reg No" required="">
-                            <input class="text w3lpass" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+				<form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+					<input class="text" type="text" name="firstName" placeholder="Firstname" required="" formControlName="firstName"><br>
+					<input class="text" type="text" name="lastName" placeholder="Lastname" required="" formControlName="lastName">
+					<input class="text email" type="email" name="email" placeholder="Email" required="" formControlName="email">
+					<input class="number" type="text" name="Contactnumber" placeholder="Contact Number" required="" formControlName="mobile"><br>
+					<input class="text" type="text" name="NIC" placeholder="NIC" required="" formControlName="nic"><br>
+					<input class="text" type="text" name="address" placeholder="Address" required="" formControlName="address"><br>
+					<input class="text" type="text" name="mltRegNo" placeholder="MLT Register Number" required="" formControlName="mltRegNo">
+
+
+					<input class="text w3lpass" type="password" name="password" placeholder="Password" required="" formControlName="password">
+					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="" formControlName="cpassword">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
@@ -65,4 +70,5 @@
 	</div>
 	<!-- //main -->
 </body>
+
 </html>

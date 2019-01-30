@@ -6,12 +6,12 @@ const config = require('../config/jwt');
 const database = require('../databaseHandle/connectDatabase');
 
 router.post("/addUsers", function (req, res) {
-
+    console.log("User details before :"+JSON.stringify(req.body));
     const usersData = [
         req.body.NIC,
         req.body.firstName,
         req.body.lastName,
-        req.body.contactNo,
+        req.body.mobile,
         req.body.email,
         req.body.password,
         req.body.addNo,
@@ -19,7 +19,7 @@ router.post("/addUsers", function (req, res) {
         req.body.addCity,
         req.body.roleId
     ]
-
+console.log("User details :"+JSON.stringify(usersData));
     database.addUsers(usersData, function (err, result) {
         if (err) {
             console.log(err);

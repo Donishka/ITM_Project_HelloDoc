@@ -14,7 +14,7 @@ export class LabComponent implements OnInit {
   ngOnInit() { 
   }
 
-  moveToBasicInfo(){
+  moveToBasicHealthInfo(){
     this._router.navigate(['/basicinfo']);
   }
 
@@ -31,8 +31,24 @@ export class LabComponent implements OnInit {
   }
 
   
-  moveToPatientProfile(){
+  moveToLabReports(){
+    this._router.navigate(['/lab']);
+    
+  }
+
+  moveToMakeAppointment(){
+    this._router.navigate(['/makeapp']);
+    
+  }
+
+  moveToPatientHome(){
     this._router.navigate(['/patientprofile']);
     
   }
+
+  moveToDiseaseHistroy(){
+    this._router.navigate(['/histroy']);
+    
+  }
+
 }

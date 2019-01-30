@@ -3,14 +3,13 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-prescription',
-  templateUrl: './prescription.component.html',
-  styleUrls: ['./prescription.component.css']
+  selector: 'app-makeapp',
+  templateUrl: './makeapp.component.html',
+  styleUrls: ['./makeapp.component.css']
 })
-export class PrescriptionComponent implements OnInit {
+export class MakeappComponent implements OnInit {
 
   constructor(private _router:Router) { }
-
   
   ngOnInit() { 
   }
@@ -51,6 +50,5 @@ export class PrescriptionComponent implements OnInit {
     this._router.navigate(['/histroy']);
     
   }
-
 
 }

@@ -25,27 +25,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post"  [formGroup]="form" (ngSubmit)="onSubmit(form)">
-                    <input class="text" type="text" name="Firstname" placeholder="Firstname"  required><br>
+                    <input hidden class="text" type="text" name="patientId" placeholder="patientId" required formControlName="roleId"><br>
                     <input class="text" type="text" name="patientId" placeholder="patientId" required formControlName="patientId"><br>
-                    <input class="text" type="text" name="Lastname" placeholder="Lastname" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="text" type="text" name="Address" placeholder="Address" required="">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="number" type="text" name="Contactnumber" placeholder="Contact Number" required=""><br>
-                    <input class="text" type="text" name="NIC" placeholder="NIC" required="" formControlName="nic">
-                    <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="text" type="text" name="User Type" placeholder="User Type" required=""><br>
+                    <input class="text" type="text" name="Firstname" placeholder="Firstname"  required formControlName="firstName"><br>
+                    <input class="text" type="text" name="Lastname" placeholder="Lastname" required=""formControlName="lastName">
+                    <input class="text email" type="email" name="email" placeholder="Email" required="" formControlName="email">
+                    <input class="text" type="text" name="No" placeholder="Address No" required="" formControlName="addNo">
+                    <input class="text" type="text" name="Street" placeholder="Street" required="" formControlName="addStreet">
+                    <input class="text" type="text" name="City" placeholder="City" required="" formControlName="addCity">
+                    <input class="number" type="text" name="Contactnumber" placeholder="Contact Number" required="" formControlName="mobile"><br>
+                    <input class="text" type="text" name="NIC" placeholder="NIC" required="" formControlName="NIC" >
                                  
                             <input class="text" type="text" name="height" placeholder="Height (cm)" required="" formControlName="height"><br>
                            
                             <input class="text" type="text" name="Weight" placeholder="Weight(KG)" required="" formControlName="weight"><br>
                             <input class="text" type="text" name="Blood Group" placeholder="Blood Group" required="" formControlName="bloodType"><br>
-                            <input class="text" type="text" name=" Material State" placeholder="Material Satate(Yes/No)" required=""><br>
                             <input class="text" type="text" name=" DOB" placeholder="Date of Birth" required="" formControlName="dob"><br>
                             <input class="text" type="text" name=" Ocuupation" placeholder="Occupation" required="" formControlName="occupation"><br>
                             <input class="text" type="text" name=" Material State" placeholder="Material Satate(Yes/No)" required="" formControlName="maritalState">
-                            <input class="text w3lpass" type="password" name="password" placeholder="Password" required="">
-          <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+                            <input class="text w3lpass" type="password" name="password" placeholder="Password" required="" formControlName="password">
+          <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="" formControlName="cpassword">
           
 					<div class="wthree-text">
 						<label class="anim">

@@ -9,12 +9,11 @@ import { Router } from '@angular/router';
 export class BasicinfoComponent implements OnInit {
 
   constructor(private _router:Router) { }
-
   ngOnInit() { 
   }
 
-  moveToPatientProfile(){
-    this._router.navigate(['/patientprofile']);
+  moveToBasicHealthInfo(){
+    this._router.navigate(['/basicinfo']);
   }
 
    
@@ -34,4 +33,20 @@ export class BasicinfoComponent implements OnInit {
     this._router.navigate(['/lab']);
     
   }
+
+  moveToMakeAppointment(){
+    this._router.navigate(['/makeapp']);
+    
+  }
+
+  moveToPatientHome(){
+    this._router.navigate(['/patientprofile']);
+    
+  }
+
+  moveToDiseaseHistroy(){
+    this._router.navigate(['/histroy']);
+    
+  }
+
 }
