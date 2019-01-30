@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {FormGroup,FormControl,Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { RegisterService} from '../../shared/services/register.service'
 
 
 @Component({
@@ -10,22 +11,42 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
 })
 export class Register3Component implements OnInit {
 
-  registerForm:FormGroup = new FormGroup({
-    email:new FormControl(null,[Validators.email,Validators.required]),
-    username:new FormControl(null,Validators.required),
-    homeaddress:new FormControl(null,Validators.required),
-    //contactnumber:new FormControl(null,Validators.required),
-    password:new FormControl(null,Validators.required),
-    cpass:new FormControl(null,Validators.required)
-  })
-  constructor(private _router:Router,) { }
+  form;
+
+  constructor(private _router: Router, fb: FormBuilder, private patientRegService:RegisterService) {
+    this.form = fb.group({
+
+      patientId: ['', Validators.required],
+      dob:['', Validators.required] ,
+      occupation:['', Validators.required] ,
+      bloodType:['', Validators.required] ,
+      maritalState:['', Validators.required] ,
+      height:['', Validators.required] ,
+      weight:['', Validators.required] ,
+      nic:['', Validators.required] ,
+
+
+    });
+  }
 
   ngOnInit() {
   }
 
-  moveToLogin(){
+  onSubmit(form){
+    let user = form.value;
+    this.patientRegService.patientRegister(user)
+        .subscribe(res=>{
+            if(true){
+                //route user somewhere
+            }else{
+                //show error message
+            }
+        })
+}
+
+  moveToLogin() {
     this._router.navigate(['/login']);
   }
 
- 
+
 }

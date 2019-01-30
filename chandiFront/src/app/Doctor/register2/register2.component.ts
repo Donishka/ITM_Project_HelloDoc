@@ -49,7 +49,7 @@ export class Register2Component implements OnInit {
         let user = form.value;
         this.regService.docRegister(user)
             .subscribe(res=>{
-                if(res.json().success){
+                if(true){
                     //route user somewhere
                 }else{
                     //show error message

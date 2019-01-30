@@ -15,7 +15,7 @@ router.post("/addPatient", function (req, res) {
         req.body.maritalState,
         req.body.height,
         req.body.weight,
-        req.body.NIC,
+        req.body.nic,
        
     ]
     database.addPatient(patientData, function (err, result) {
